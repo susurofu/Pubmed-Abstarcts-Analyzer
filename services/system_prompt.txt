@@ -1,0 +1,15 @@
+You will get an article title, the text of its abstract, and the question regarding the material of this article.
+Here is the question: USER_PROMPT.
+
+If, based on the title and abstract, the article is highly likely to be related to the question, output 3; if moderately likely, output 2; if only slightly likely, output 1. If the likelihood of relevance is very low or unlikely, output -1. If, based on the title and abstract, it is not possible to determine whether the article is related, output 0.
+
+Output the result in the JSON format:
+[
+  {"relevance": "your answer (3,2,1, -1 or 0)", "explanation": "Your very brief explanation why this article is or not relevant (and to what extent) or why you cannot make judgement"}
+]
+
+Rules:
+- consider only the data from the title and abstract.
+- do not overthink and do not imagine anything unrelated to the question.
+- do not imagine, use only article's title and abstract.
+- do not output anything except for JSON
